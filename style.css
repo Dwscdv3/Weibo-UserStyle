@@ -1,0 +1,121 @@
+/**        Name: （待定）
+ *  Last update: 2017/3/27
+ *       Author: Dwscdv3
+ */
+
+@-moz-document domain("weibo.com") {
+/* 首页右侧::会员用户推荐 */
+#v6_trustPagelet_recom_member,
+/* 首页右侧::主播红人榜 */
+#v6_pl_rightmod_rank,
+/* 首页右侧::广告 */
+#v6_pl_rightmod_recominfo,
+#v6_pl_rightmod_ads36,
+div[ad-data] {
+    display: none;
+}
+
+/* 首页发微博::右上角热门话题 */
+.key[node-type="recommendTopic"] {
+    display: none;
+}
+
+/* 导航栏::视频 */
+a[nm="tv"],
+/* 导航栏::游戏 */
+a[nm="game"] {
+    display: none !important;
+}
+
+/* 相关推荐 */
+#Pl_Core_RecommendFeed__20,
+#Pl_Core_RecommendFeed__75,
+.PCD_feed {
+    display: none;
+}
+
+/* 信息流上方广告 */
+#v6_pl_content_biztips {
+    display: none;
+}
+
+/* 广告微博 */
+div[feedtype="ad"] {
+    display: none;
+}
+
+/* 用户名旁边图标 */
+a[title="微博会员"],
+a[title="疯狂婚礼季"],
+a[href="http://club.weibo.com/intro"] {
+    display: none;
+}
+
+/* 评论框上方提示 */
+.WB_repeat .W_tips {
+    display: none;
+}
+
+/* 卡片背景 */
+.WB_starcover {
+    display: none !important;
+}
+.WB_feed_detail {
+    background-image: none !important;
+}
+
+/* 透明化::全局导航栏 */
+.WB_global_nav {
+    opacity: 0.75;
+}
+/* 透明化::网页主体 (露出背景) */
+.WB_main {
+    opacity: 0.75;
+}
+/* 透明化::个人主页导航栏 - [全部 热门 更多↓  搜索] */
+#Pl_Official_ProfileFeedNav__20 .WB_tab_a {
+    opacity: 0.75;
+}
+}
+
+@-moz-document regexp(".*weibo.com/\\d{5,10}/[A-Za-z0-9]{9}.*") {
+/* 微博页::侧边栏 */
+.WB_frame_b,
+#pl_common_footer {
+    display: none;
+}
+/* 微博页::主板块居中 */
+.WB_frame_c {
+    display: block;
+    margin: 0 auto;
+}
+.B_page .WB_frame #plc_main {
+    width: 100%;
+}
+
+/* 已放弃的仅背景透明化 */
+/*
+.S_bg2, blockquote, .W_btn_b, .W_input, .SW_fun_bg {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.S_bg1, .SW_fun_bg:hover, .SW_fun_bg_active {
+    background-color: rgba(191, 191, 191, 0.2);
+}
+.between_line {
+    display: none;
+}
+.S_bg3 {
+    background-color: transparent;
+    border-left: 2px solid rgba(127, 127, 127, 0.5);
+}
+.WB_feed_repeat .repeat_list .list_box_in .list_li {
+    border: none;
+}
+body, legend, .W_input:focus, .S_txt1, .W_btn_b, .SW_fun .S_func1 {
+    color: #333;
+}
+.S_line1, .W_btn_prev, .W_btn_next, .W_btn_b {
+    border-color: rgba(217, 217, 217, 0.75);
+}
+*/
+}
