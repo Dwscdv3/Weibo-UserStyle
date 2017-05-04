@@ -1,8 +1,3 @@
-/**        Name: （待定）
- *  Last update: 2017/3/27
- *       Author: Dwscdv3
- */
-
 @-moz-document domain("weibo.com") {
 /* 首页右侧::会员用户推荐 */
 #v6_trustPagelet_recom_member,
@@ -47,7 +42,10 @@ div[feedtype="ad"] {
 /* 用户名旁边图标 */
 a[title="微博会员"],
 a[title="疯狂婚礼季"],
-a[href="http://club.weibo.com/intro"] {
+a[title="随手拍#感觉自己萌萌哒#"],
+a[title="随手拍#不可辜负的美食#"],
+a[href="http://club.weibo.com/intro"],
+a[href="http://vgirl.weibo.com"] {
     display: none;
 }
 
@@ -57,7 +55,8 @@ a[href="http://club.weibo.com/intro"] {
 }
 
 /* 卡片背景 */
-.WB_starcover {
+.WB_starcover,
+.WB_vipcover {
     display: none !important;
 }
 .WB_feed_detail {
@@ -76,6 +75,7 @@ a[href="http://club.weibo.com/intro"] {
 #Pl_Official_ProfileFeedNav__20 .WB_tab_a {
     opacity: 0.75;
 }
+
 }
 
 @-moz-document regexp(".*weibo.com/\\d{5,10}/[A-Za-z0-9]{9}.*") {
@@ -118,4 +118,15 @@ body, legend, .W_input:focus, .S_txt1, .W_btn_b, .SW_fun .S_func1 {
     border-color: rgba(217, 217, 217, 0.75);
 }
 */
+
+}
+
+@-moz-document url-prefix("http://weibo.com/ttarticle/p/show?") {
+/* 修复在窗口宽度小于 1100px 时微博文章侧边栏（关闭、分享、返回顶部）出界的问题 */
+@media (max-width: 1100px) {
+    .W_gotop {
+        left: calc(-50% + 50px);
+    }
+}
+
 }
