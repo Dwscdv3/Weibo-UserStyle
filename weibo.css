@@ -41,9 +41,12 @@ div[feedtype="ad"] {
 
 /* 用户名旁边图标 */
 a[title="微博会员"],
+a[title="超级红人节"],
+a[title="超级网红节"],
 a[title="疯狂婚礼季"],
-a[title="随手拍#感觉自己萌萌哒#"],
-a[title="随手拍#不可辜负的美食#"],
+a[title="1688诚信通"],
+a[title^="随手拍"],
+a[title="#LOL季中赛#"],
 a[href="http://club.weibo.com/intro"],
 a[href="http://vgirl.weibo.com"] {
     display: none;
@@ -79,6 +82,10 @@ a[href="http://vgirl.weibo.com"] {
 }
 
 @-moz-document regexp(".*weibo.com/\\d{5,10}/[A-Za-z0-9]{9}.*") {
+/* 透明化::网页主体 (露出背景) */
+.WB_main {
+    opacity: 0.75;
+}
 /* 微博页::侧边栏 */
 .WB_frame_b,
 #pl_common_footer {
@@ -121,7 +128,7 @@ body, legend, .W_input:focus, .S_txt1, .W_btn_b, .SW_fun .S_func1 {
 
 }
 
-@-moz-document url-prefix("http://weibo.com/ttarticle/p/show?") {
+@-moz-document url-prefix("http://weibo.com/ttarticle/p/show?"), url-prefix("http://weibo.com/ttwenda/p/show?"), url-prefix("https://weibo.com/ttarticle/p/show?"), url-prefix("https://weibo.com/ttwenda/p/show?") {
 /* 修复在窗口宽度小于 1100px 时微博文章侧边栏（关闭、分享、返回顶部）出界的问题 */
 @media (max-width: 1100px) {
     .W_gotop {
